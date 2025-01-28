@@ -1,0 +1,224 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+
+  /* Template Background: https://codepen.io/t_afif/pen/GRGmvbo */
+  --s: 50px;
+  --c: #191b22;
+  --_s: calc(2*var(--s)) calc(2*var(--s));
+  --_g: 35.36% 35.36% at;
+  --_c: #0000 66%,#20222a 68% 70%,#0000 72%;
+  background: 
+    radial-gradient(var(--_g) 100% 25%,var(--_c)) var(--s) var(--s)/var(--_s), 
+    radial-gradient(var(--_g) 0 75%,var(--_c)) var(--s) var(--s)/var(--_s), 
+    radial-gradient(var(--_g) 100% 25%,var(--_c)) 0 0/var(--_s), 
+    radial-gradient(var(--_g) 0 75%,var(--_c)) 0 0/var(--_s), 
+    repeating-conic-gradient(var(--c) 0 25%,#0000 0 50%) 0 0/var(--_s), 
+    radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
+  background-attachment: fixed;
+}
+
+.container_A {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  width: 60%;
+  height: 60%;
+  background-color: #262d3d;
+}
+
+.container_B {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: auto;
+  margin-right: 5px;
+}
+
+.container_B img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.container_Image{
+  display: contents;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.container_B input {
+  display: none;
+}
+
+.container_B label {
+  margin-top: 17px;
+  padding: 10px;
+  justify-content: center;
+  background-color: #1abc9c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+}
+
+.container_B label:hover {
+  background-color: #16a085;
+}
+
+.container_C {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 60%;
+  height: auto;
+  padding: 20px;
+}
+
+.container_C label {
+  font-size: 18px;
+  color: #ffffff;
+  font-family: 'Verdana', sans-serif;
+}
+
+.container_C span {
+  font-size: 18px;
+  margin-left: 0px;
+  color: #ffffff;
+  font-family: 'Verdana', sans-serif;
+}
+
+.container_C input:focus {
+  border-color: #1abc9c;
+  box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+  outline: none;
+}
+
+.container_C input[type="text"] {
+  font-family: 'Arial', sans-serif;
+  font-size: 15px;
+  width: 500px;
+  height: 30px;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.container_C input[type="text"]::placeholder {
+  font-family: 'Arial', sans-serif;
+  font-size: 15px;
+  font-style: italic;
+  color: #fc3c2b;
+  opacity: 1;
+}
+
+.container_C textarea {
+  font-family: 'Arial', sans-serif;
+  font-size: 15px;
+  width: 500px;
+  height: 80px;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+  color: #333;
+  resize: none;
+}
+
+.container_C textarea:focus {
+  border-color: #1abc9c;
+  box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+  outline: none;
+}
+
+.container_D {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.create {
+  padding: 10px;
+  background: linear-gradient(90deg, #28a745, #3edc81);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+  width: 100px;
+  transition: background-color 0.3s ease;
+}
+
+.create:hover {
+  background: linear-gradient(90deg, #218838, #36c771);
+}
+
+.reset {
+  text-align: center;
+  padding: 10px;
+  background: linear-gradient(90deg, #ffc107, #ffde7a);
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+  width: 100px;
+  transition: background-color 0.3s ease;
+}
+
+.reset:hover {
+  background: linear-gradient(90deg, #e0a800, #ffcd4f);
+}
+
+.cancel {
+  text-align: center;
+  padding: 10px;
+  background: linear-gradient(90deg, #e74c3c, #e67e22);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+  width: 100px;
+  transition: background-color 0.3s ease;
+}
+
+.cancel:hover {
+  background: linear-gradient(90deg, #c0392b, #d35400);
+}
+
+form {
+  display: contents;
+  margin: 0;
+  padding: 0;
+  border: none;
+}

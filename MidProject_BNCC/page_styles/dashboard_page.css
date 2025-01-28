@@ -1,0 +1,245 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    --s: 50px;
+    --c: #191b22;
+    --_s: calc(2*var(--s)) calc(2*var(--s));
+    --_g: 35.36% 35.36% at;
+    --_c: #0000 66%,#20222a 68% 70%,#0000 72%;
+    background: radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s)/var(--_s),
+                radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s)/var(--_s),
+                radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0/var(--_s),
+                radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0/var(--_s),
+                repeating-conic-gradient(var(--c) 0 25%,#0000 0 50%) 0 0/var(--_s),
+                radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
+    background-attachment: fixed;
+}
+
+.navbar {
+    padding: 10px;
+    background-color: #262d3d;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.navbar ul li a:hover span {
+    text-decoration: underline;
+}
+
+.navbar ul li a i {
+    font-size: 18px;
+    color: #1abc9c;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover i {
+    color: #16a085;
+}
+
+.search_Bar {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.search_Container {
+    position: relative;
+    display: inline-block;
+    width: 500px;
+}
+
+.search_Container input {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    border-color: #262d3d;
+    border-width: 2.5px;
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+.search_Container input:focus {
+    border-color: #1abc9c;
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+}
+
+.search_Container i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.search_Container i:hover {
+    color: #1abc9c;
+}
+
+.user_Table {
+    margin: auto;
+    width: 90%;
+    background-color: #262d3d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    max-height: 468px;
+    overflow-y: auto;
+}
+
+.user_Table img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.user_Table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user_Table thead {
+    background-color: #262d3d;
+    color: white;
+}
+
+.user_Table th, .user_Table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.user_Table th{
+    background-color: #262d3d;
+}
+
+.user_Table tr{
+    background-color: white;
+}
+
+.user_Table tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #262d3d;
+    border-radius: 0px 10px 10px 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1abc9c;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #16a085;
+}
+
+.add_User {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.add_User button {
+    padding: 10px;
+    justify-content: center;
+    background: linear-gradient(90deg, #1abc9c, #48d1a7);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+}
+
+.add_User button:hover {
+    background: linear-gradient(90deg, #16a085, #3cb790);
+}
+
+.view_Button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.view_Button:hover {
+    background-color: #2980b9;
+}
+
+.update_Button {
+    background-color: #f1c40f;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.update_Button:hover {
+    background-color: #f39c12;
+}
+
+.delete_Button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete_Button:hover {
+    background-color: #c0392b;
+}
+
+footer {
+    background-color: #262d3d;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #d67af1;
+}
+
+
+form {
+    display: contents;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }

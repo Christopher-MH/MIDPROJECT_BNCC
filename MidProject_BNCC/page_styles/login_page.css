@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+    /* Template Pattern: https://codepen.io/t_afif/pen/GRGmvbo*/
+    --s: 50px;
+    --c: #191b22;
+    --_s: calc(2*var(--s)) calc(2*var(--s));
+    --_g: 35.36% 35.36% at;
+    --_c: #0000 66%,#20222a 68% 70%,#0000 72%;
+    background: 
+      radial-gradient(var(--_g) 100% 25%,var(--_c)) var(--s) var(--s)/var(--_s), 
+      radial-gradient(var(--_g) 0 75%,var(--_c)) var(--s) var(--s)/var(--_s), 
+      radial-gradient(var(--_g) 100% 25%,var(--_c)) 0 0/var(--_s), 
+      radial-gradient(var(--_g) 0 75%,var(--_c)) 0 0/var(--_s), 
+      repeating-conic-gradient(var(--c) 0 25%,#0000 0 50%) 0 0/var(--_s), 
+      radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
+    background-attachment: fixed;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 400px;
+
+    background-color: #262d3d;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 35px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    display: none;
+    font-family: 'Arial', sans-serif;
+    color: #fc3c2b;
+    font-size: 15px;
+    font-style: italic;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin-left: 5%;
+    opacity: 1;
+}
+
+label {
+    color: #ffffff;
+    text-align: left;
+    width: 100%;
+    margin-left: 5%;
+}
+
+input[type = "text"]{
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-left: 5%;
+}
+
+input[type = "text"]::placeholder {
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    font-style: italic;
+    color: #fc3c2b;
+    opacity: 1;
+}
+
+input[type = "password"]{
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-left: 5%;
+}
+
+input[type = "checkbox"] {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+input[type = "submit"] {
+    width: 90%;
+    padding: 10px;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 5%;
+    margin-bottom: 10px;
+}
+
+input[type = "submit"]:hover {
+    background-color: #16a085;
+}
